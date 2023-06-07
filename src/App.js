@@ -18,7 +18,8 @@ function App() {
     let studnets = await response.json();
     setStudents(studnets);
   };
-  useEffect(() => getstudent);
+
+  useEffect(() => {getstudent()});
 
   return (
     <div>

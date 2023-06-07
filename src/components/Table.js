@@ -27,6 +27,7 @@ const Table = (props) => {
     );
   };
 
+  
   const ref = useRef(null);
   const refclose = useRef(null);
   let handleedit = (id, name, age, gender, marks, email, batch, section) => {
@@ -56,7 +57,7 @@ const Table = (props) => {
         age: age,
         marks: marks,
         batch: batch,
-        section: section,
+        section: section
       }),
     });
     await response.json();
@@ -122,7 +123,7 @@ const Table = (props) => {
         </table>
         <button
           type="button"
-          className="btn btn-primary"
+          class="btn btn-primary"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           hidden={true}
@@ -130,27 +131,27 @@ const Table = (props) => {
         ></button>
 
         <div
-          className="modal fade"
+          class="modal fade"
           id="exampleModal"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
                   Modal title
                 </h1>
                 <button
                   type="button"
-                  className="btn-close"
+                  class="btn-close"
                   data-bs-dismiss="modal"
                   ref={refclose}
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
+              <div class="modal-body">
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">
                     Name
@@ -237,17 +238,17 @@ const Table = (props) => {
                   />
                 </div>
               </div>
-              <div className="modal-footer">
+              <div class="modal-footer">
                 <button
                   type="button"
-                  className="btn btn-secondary"
+                  class="btn btn-secondary"
                   data-bs-dismiss="modal"
                 >
                   Close
                 </button>
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  class="btn btn-primary"
                   onClick={handleupdate}
                 >
                   Update
